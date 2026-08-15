@@ -3,7 +3,7 @@
 Click any image in your VitePress docs to open it in a [viewerjs](https://github.com/fengyuanchen/viewerjs) lightbox.
 
 A fork of [T-miracle/vitepress-plugin-image-viewer](https://github.com/T-miracle/vitepress-plugin-image-viewer),
-rewritten for VitePress 2.x alpha and in use on the [Calagopus](https://calagopus.com) docs.
+rewritten for VitePress 2.x alpha.
 Still works on VitePress 1.x.
 
 ## Install
