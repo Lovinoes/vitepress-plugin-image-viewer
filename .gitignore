@@ -1,5 +1,5 @@
 node_modules
-.idea
-package-lock.json
-pnpm-lock.yaml
-**/cache
+dist
+docs/.vitepress/cache
+docs/.vitepress/dist
+*.tgz

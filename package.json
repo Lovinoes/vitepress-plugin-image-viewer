@@ -1,36 +1,54 @@
 {
-  "name": "vitepress-plugin-image-viewer",
-  "version": "1.1.5",
-  "description": "image viewer for vitepress",
+  "name": "vitepress-plugin-viewerjs",
+  "version": "2.0.0",
+  "description": "Image viewer for VitePress 1 and 2, based on viewerjs",
   "type": "module",
-  "types": "./lib/viewer.d.ts",
-  "main": "./lib/viewer.js",
-  "scripts": {
-    "run": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
-    "lib",
+    "dist",
     "README.md"
   ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test test/*.test.js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
+  },
   "keywords": [
     "vitepress",
-    "imageViewer",
-    "vitepress-plugin"
+    "vitepress-plugin",
+    "image-viewer",
+    "viewerjs",
+    "lightbox"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/T-miracle/vitepress-plugin-image-viewer"
-  },
-  "author": "T-miracle",
   "license": "MIT",
+  "author": "Lovinoes",
+  "contributors": [
+    "T-miracle (original vitepress-plugin-image-viewer)"
+  ],
   "dependencies": {
-    "viewerjs": "^1.11.6"
+    "viewerjs": "^1.11.7"
+  },
+  "peerDependencies": {
+    "vitepress": "^1.0.0 || ^2.0.0-alpha.0",
+    "vue": "^3.4.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.4",
-    "vitepress": "^1.3.1",
-    "vue": "^3.4.34"
+    "linkedom": "^0.18.11",
+    "typescript": "^5.6.0",
+    "vitepress": "2.0.0-alpha.19",
+    "vue": "^3.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lovinoes/vitepress-plugin-image-viewer"
   }
 }
