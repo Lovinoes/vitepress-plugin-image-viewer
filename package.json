@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "test": "tsc && node --test test/*.test.js",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs"
@@ -49,6 +50,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lovinoes/vitepress-plugin-image-viewer"
+    "url": "git+https://github.com/Lovinoes/vitepress-plugin-image-viewer.git"
+  },
+  "homepage": "https://github.com/Lovinoes/vitepress-plugin-image-viewer#readme",
+  "bugs": {
+    "url": "https://github.com/Lovinoes/vitepress-plugin-image-viewer/issues"
   }
 }
